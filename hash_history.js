@@ -1,4 +1,4 @@
-/*  HistoryManage */
+/*  HashHistory */
 (function(window,document){
     var mix = QW.ObjectH.mix,
         CustEvent = QW.CustEvent,
@@ -17,7 +17,7 @@
     /*** 页面浏览历史管理类 *** 
     *  (目前主要用于客户端弹窗,暂不考虑 history.pushState, 仅做location.hash相关监听处理 ) *
     */
-    function HistoryManage(opts){
+    function HashHistory(opts){
 
         opts = opts||{};
         
@@ -28,7 +28,7 @@
 
     };
 
-    mix(HistoryManage.prototype,{
+    mix(HashHistory.prototype,{
 
         _init:function(){
 
@@ -138,8 +138,8 @@
 
     });
 
-    window.HistoryManage = QW.HistoryManage = HistoryManage;
-    /*  页面URL History 管理器 end */    
+    window.HashHistory = QW.HashHistory = HashHistory;
+    /*  页面URL HashHistory 管理器 end */    
 
 })(window,document);
 
